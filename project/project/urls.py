@@ -19,10 +19,11 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.landing,name='landing'),
-    path('login/',views.login,name='login'),
-    path('login_data/',views.login_data,name='login_data'),
-    # path('dashboard/',views.dashboard,name='dashboard'),
+    path('', views.landing, name='landing'),        # Landing page - home page for users
+    path('register/', views.register, name='register'),        # Registration page - displays registration form
+    path('registerdata/', views.registerdata, name='registerdata'),  # Handles registration form POST data
+    path('login/', views.login, name='login'),      # Login page - displays login form
+    path('logindata/', views.logindata, name='logindata'),   # Handles login form POST data
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
 

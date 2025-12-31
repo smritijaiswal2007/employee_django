@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>5 Buttons Form</title>
+
+<style>
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Form box */
+.modal-content {
+  background: #fff;
+  width: 300px;
+  margin: 120px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 5 Buttons -->
+<button onclick="openForm()">Show all employee</button> <br> <br>
+<button> employee details</button>    <br> <br>
+<button>details<button>  <br> <br>
+<button>about</button>  <br> <br>
+<button>logout</button>   <br> <br>
+
+<!-- Form Modal -->
+<div class="modal" id="formBox">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+
+    <h3>Form</h3>
+    <form>
+      <input type="text" placeholder="Name" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("formBox").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("formBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
